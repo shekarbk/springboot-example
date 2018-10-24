@@ -12,7 +12,7 @@ http://localhost:8080/pet
         "age": 3,
         "color": "brown"
     }
-    </br>
+</br>
 GET:        
 http://localhost:8080/pet/2
 </br>
