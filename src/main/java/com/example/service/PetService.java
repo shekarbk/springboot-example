@@ -12,7 +12,7 @@ public class PetService {
 
     List<Pet> petStore = new ArrayList();
 
-    public boolean  addPet(Pet pet) {
+    public boolean addPet(Pet pet) {
         return petStore.add(pet);
     }
 
@@ -29,5 +29,12 @@ public class PetService {
     public Pet getPet(int id) {
         Optional<Pet> optionalPet = petStore.stream().filter(pet -> pet.getId() == id).findFirst();
         return optionalPet.get();
+    }
+
+    public boolean updatePet(Pet pet) {
+        if (!petStore.isEmpty()) {
+            if (petStore.removeIf(p -> p.getId() == pet.getId())) return petStore.add(pet);
+        }
+        return false;
     }
 }

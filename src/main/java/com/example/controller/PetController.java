@@ -29,12 +29,13 @@ public class PetController {
     @PostMapping
     public String createPet(@RequestBody Pet pet) {
         if (petService.addPet(pet)) return "New Pet created successfully";
-        else return "New Pet failed to create !!!";
+        else return "adding new Pet failed !!!";
     }
 
     @PutMapping
     public String updatePet(@RequestBody Pet pet) {
-        return "Pet details Updated successfully";
+         if(petService.updatePet(pet)) return "Pet details Updated successfully";
+         else return "update failed!!!";
     }
 
     @DeleteMapping("/{petId}")
