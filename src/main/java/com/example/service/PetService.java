@@ -16,7 +16,7 @@ public class PetService {
         Pet p1 = new Pet();
         p1.setId(1);
         p1.setColor("white");
-        p1.setName("Lilly");
+        p1.setName("Lilly ");
         p1.setAge(2);
 
         Pet p2 = new Pet();

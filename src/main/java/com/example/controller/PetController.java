@@ -28,7 +28,7 @@ public class PetController {
 
     @PostMapping
     public String createPet(@RequestBody Pet pet) {
-        if (petService.addPet(pet)) return "New Pet created successfully";
+        if (petService.addPet(pet)) return "New Pet created successfully ";
         else return "adding new Pet failed !!!";
     }
 
