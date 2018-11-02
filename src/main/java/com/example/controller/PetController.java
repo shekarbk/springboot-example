@@ -10,7 +10,7 @@ import java.util.List;
  * Pet Controller class
  */
 @RestController
-@RequestMapping("/pet")
+@RequestMapping("/pets")
 public class PetController {
 
     @Autowired
@@ -32,9 +32,9 @@ public class PetController {
         else return "adding new Pet failed !!!";
     }
 
-    @PutMapping
-    public String updatePet(@RequestBody Pet pet) {
-         if(petService.updatePet(pet)) return "Pet details Updated successfully";
+    @PutMapping("{petId}")
+    public String updatePet(@PathVariable int petId, @RequestBody Pet pet) {
+         if(petService.updatePet(petId, pet)) return "Pet details Updated successfully";
          else return "update failed!!!";
     }
 
