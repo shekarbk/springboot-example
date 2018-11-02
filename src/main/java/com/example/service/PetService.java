@@ -52,8 +52,8 @@ public class PetService {
     }
 
     public Pet getPet(int id) {
-        Optional<Pet> optionalPet = petStore.stream().filter(pet -> pet.getId() == id).findFirst();
-        return optionalPet.get();
+//        Optional<Pet> optionalPet = petStore.stream().filter(pet -> pet.getId() == id).findFirst();
+        return petStore.stream().filter(pet -> pet.getId() == id).findFirst().get();
     }
 
     public boolean updatePet(int id, Pet newPet) {
