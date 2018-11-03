@@ -35,7 +35,6 @@ public class PetService {
     }
 
     public Pet getPet(int id) {
-//        Optional<Pet> optionalPet = petStore.stream().filter(pet -> pet.getId() == id).findFirst();
         return petStore.stream().filter(pet -> pet.getId() == id).findFirst().get();
     }
 
@@ -48,7 +47,6 @@ public class PetService {
                 }
             }
         }
-//        if (petStore.removeIf(p -> p.getId() == id)) return petStore.add(newPet);
         return false;
     }
 }
