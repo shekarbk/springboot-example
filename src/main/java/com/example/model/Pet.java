@@ -8,6 +8,18 @@ public class Pet {
     private int id;
     private String name;
     private int age;
+    private String color;
+
+    public Pet() {
+
+    }
+
+    public Pet(int id, String name, int age, String color) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.color = color;
+    }
 
     public int getId() {
         return id;
@@ -16,8 +28,6 @@ public class Pet {
     public void setId(int id) {
         this.id = id;
     }
-
-    private String color;
 
     public String getColor() {
         return color;
